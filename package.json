@@ -1,0 +1,16 @@
+{
+  "name": "codeceptjs_project",
+  "version": "1.0.0",
+  "description": "Automated Web Testing Project with CodeceptJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "codeceptjs run --steps"
+  },
+  "keywords": [],
+  "author": "Generated",
+  "license": "ISC",
+  "devDependencies": {
+    "codeceptjs": "^3.5.0",
+    "puppeteer": "^23.11.1"
+  }
+}
