@@ -37,10 +37,10 @@ When('I fill in the {string} field with {string}', (field, value) => {
 When('I click on the {string} button', (buttonText) => {
   // Replace the buttonText with its corresponding XPath or CSS selector if needed
   I.click(`//button[contains(text(), '${buttonText}') or @value='${buttonText}']`);
-  I.waitForElement('//img[@alt="Generated QR Code"]', 5); // Wait for the QR Code to appear
+  I.waitForElement('//img[@class="gwt-Image"]', 5); // Wait for the QR Code to appear
 });
 
 
-// Then('I should see a generated QR Code on the right', () => {
-//   I.seeElement('//img[@alt="Generated QR Code"]'); // Verifies QR Code image
-// });
+Then('I should see a generated QR Code on the right', () => {
+  I.seeElement('//img[@class="gwt-Image"]'); // Verifies QR Code image
+});
