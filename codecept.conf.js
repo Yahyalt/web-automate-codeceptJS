@@ -1,12 +1,5 @@
-
-const { setHeadlessWhen } = require('@codeceptjs/configure');
-
-// Enable headless mode when running with HEADLESS=true environment variable
-// HEADLESS=true npm run codeceptjs
-setHeadlessWhen(process.env.HEADLESS);
-
 exports.config = {
-  tests: './tests/**/*.js',
+  tests: './features/**/*.feature', // Path to the .feature files
   output: './output',
   helpers: {
     Puppeteer: {
@@ -18,9 +11,13 @@ exports.config = {
   include: {
     I: './steps_file.js'
   },
+  gherkin: {
+    features: './features/example.feature', // Path to .feature files
+    steps: ['./step_definitions/example_steps.js'] // Path to step definitions
+  },
   bootstrap: null,
   mocha: {},
-  name: 'codeceptjs_project',
+  name: 'codeceptjs_project_with_bdd',
   plugins: {
     retryFailedStep: {
       enabled: true
