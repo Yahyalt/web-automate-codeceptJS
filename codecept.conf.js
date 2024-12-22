@@ -12,7 +12,7 @@ exports.config = {
     I: './steps_file.js'
   },
   gherkin: {
-    features: './features/example.feature', // Path to .feature files
+    features: './features/example.feature',  // Path to .feature files
     steps: ['./step_definitions/example_steps.js'] // Path to step definitions
   },
   bootstrap: null,
